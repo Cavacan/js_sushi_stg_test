@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: transform 6s cubic-bezier(0.42, 0, 0.58, 1); /* イージング効果 */
+}
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.yellow { background-color: yellow; }
+
+/* 初期位置 */
+.red {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blue {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) translateX(-100%);
+}
+
+.green {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.yellow {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}

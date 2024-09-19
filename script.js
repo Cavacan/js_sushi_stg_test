@@ -1,3 +1,5 @@
+import { updateTargetPosition } from "./enmy/enmy.js";
+
 const icon = document.getElementById('icon');
 const moveSpeed = 5;  // アイコンの移動速度 (ピクセル/フレーム)
 let iconPosition = { x: window.innerWidth / 2, y: (window.innerHeight * 4) / 5 };
@@ -40,6 +42,7 @@ function gameLoop() {
 
     updateIconPosition();
     updateBullets();
+    updateTargetPosition();
 
     requestAnimationFrame(gameLoop);
 }
